@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		
+		<!-- Website Title & Description for Search Engine purposes -->
+		<title></title>
+		<meta name="description" content="">
+		
+		<!-- Mobile viewport optimized -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<!-- Bootstrap CSS -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+		
+		<!-- Custom CSS -->
+		<link href="includes/css/styles.css" rel="stylesheet">
+		
+		<!-- Include Modernizr in the head, before any other Javascript -->
+		<script src="includes/js/modernizr-2.6.2.min.js"></script>
+		
+		<script src="includes/js/script.js"></script>
+		<!-- icons -->
+		<script src="https://use.fontawesome.com/acfffaefc7.js"></script>
+
+<script
+src="http://maps.googleapis.com/maps/api/js">
+</script>
+
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+		
+	</head>
+	<body>
+
+	
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+       <div class="navbar-header">
+        <a class="navbar-brand" href="#"><img src="images\logo.jpg" class="im"/></a>
+        <a href="#" class="navbar-brand">Gadget World</a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       </div>
+       <div class="collapse navbar-collapse" id="myNavbar">
+         <ul class="nav navbar-nav">
+           <li class="active"><a href="#">Home</a></li>
+           <li class="dropdown">
+             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mobiles<span class="caret"></span></a>
+             <ul class="dropdown-menu test"><li class="sublist"><a href="#">Samsung</a></li>
+				<li class="sublist"><a href="#">Nokia</a></li>
+				<li class="sublist"><a href="#">Sony</a></li>
+				<li class="sublist"><a href="#">HTC</a></li>
+				<li class="sublist"><a href="#">Blackberry	</a></li>
+				<li class="sublist"><a href="#">Xiomi</a></li>
+				<li class="sublist"><a href="#">Lenova</a></li>
+				<li class="sublist"><a href="#">Oneplus</a></li>
+             </ul>
+           </li>
+           <li class="dropdown">
+             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Laptops<span class="caret"></span></a>
+             <ul class="dropdown-menu test">
+               	<li class="sublist"><a href="#">Dell</a></li>
+				<li class="sublist"><a href="#">Lenova</a></li>
+				<li class="sublist"><a href="#">Asus</a></li>
+				<li class="sublist"><a href="#">HP</a></li>
+				<li class="sublist"><a href="#">Sony</a></li>
+				<li class="sublist"><a href="#"><i class="fa fa-apple" aria-hidden="true"></i>&nbsp;Apple</a></li>
+             </ul>
+           </li>
+           <li class="dropdown">
+             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tablets<span class="caret"></span></a>
+             <ul class="dropdown-menu test">
+             	<li class="sublist"><a href="#">Lenova</a></li>
+				<li class="sublist"><a href="#">Apple</a></li>
+				<li class="sublist"><a href="#">Samsung</a></li>
+				<li class="sublist"><a href="#">GoogleNexus</a></li>	
+             </ul>
+           </li>
+           </ul>
+         <ul class="nav navbar-nav navbar-right">
+           <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+           <li><a href="#" data-toggle="modal" data-target="#myModal1"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+         </ul>
+       </div>
+      </div>
+      </nav><!--nav bar ending-->
+
+      <!-- login modal starting -->
+       <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3>Login to Gadget World</h3>
+          </div>
+          <div class="modal-body">
+            <form method="post" action='' name="login_form">
+              <p><input type="text" class="span3" name="eid" id="email" placeholder="Email"></p>
+              <p><input type="password" class="span3" name="passwd" placeholder="Password"></p>
+              <p><button type="submit" class="btn btn-primary">Sign in</button>
+                <a href="#">Forgot Password?</a>
+              </p>
+            </form>
+          </div>
+        </div>
+		</div></div>
+        <!--login modal ending-->
+
+<!-- sign up modal starting -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+<div class="container">
+  <div class="row">
+   <div class="col-md-6">
+    
+          <form class="form-horizontal" action="" method="POST">
+          <fieldset>
+            <div id="legend">
+              <legend class="">Register</legend>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="username">Username</label>
+              <div class="controls">
+                <input type="text" id="username" name="username" placeholder="" class="form-control input-lg">
+                <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+              </div>
+            </div>
+         
+            <div class="control-group">
+              <label class="control-label" for="email">E-mail</label>
+              <div class="controls">
+                <input type="email" id="email" name="email" placeholder="" class="form-control input-lg">
+                <p class="help-block">Please provide your E-mail</p>
+              </div>
+            </div>
+         
+            <div class="control-group">
+              <label class="control-label" for="password">Password</label>
+              <div class="controls">
+                <input type="password" id="password" name="password" placeholder="" class="form-control input-lg">
+                <p class="help-block">Password should be at least 6 characters</p>
+              </div>
+            </div>
+         
+            <div class="control-group">
+              <label class="control-label" for="password_confirm">Password (Confirm)</label>
+              <div class="controls">
+                <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="form-control input-lg">
+                <p class="help-block">Please confirm password</p>
+              </div>
+            </div>
+         
+            <div class="control-group">
+              <!-- Button -->
+              <div class="controls">
+                <button class="btn btn-success">Register</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+    
+    </div> 
+  </div>
+</div>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div><!--end of modal-->
+  <!-- carousel starting -->
+<div id="myCarousel" class="carousel slide container" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+    <li data-target="#myCarousel" data-slide-to="4"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active" id="slide1">
+					<div class="carousel-caption">
+						<h4></h4>
+						<p></p>
+					</div><!--end carousel caption-->
+				</div><!--end item-->
+				<div class="item" id="slide2">
+					<div class="carousel-caption">
+						<h4></h4>					</div><!--end carousel caption-->
+				</div><!--end item-->
+				<div class="item" id="slide3">
+					<div class="carousel-caption">
+						<h4></h4>
+						<p></p>
+					</div><!--end carousel caption-->
+				</div>
+				<div class="item" id="slide4">
+					<div class="carousel-caption">
+						<h4></h4>
+						<p></p>
+					</div><!--end carousel caption-->
+				</div>
+				<div class="item" id="slide5">
+					<div class="carousel-caption">
+						<h4></h4>
+						<p></p>
+					</div><!--end carousel caption-->
+				</div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div><!--end of carousel-->
+
+
+<!-- thumbnails starting -->
+<div class="container" style="margin-top:50px">
+  <h2>Latest Mobile of 2016</h2>
+  <p>Click on the images to see it in full size:</p>
+  <div class="row">
+    <div class="col-md-4">
+      <a href="images/infocus.png" class="thumbnail">
+        <p>Infocus</p>
+        <img src="images/infocus.png" alt="Infocus" class="img-responsive" style="width:150px;height:150px">
+      </a>
+    </div>
+    <div class="col-md-4">
+      <a href="images/blackberry.png" class="thumbnail">
+        <p>BlackBerry</p>
+        <img src="images/blackberry.png" alt="BlackBerry" class="img-responsive" style="width:150px;height:150px">
+      </a>
+    </div>
+    <div class="col-md-4">
+      <a href="images/nexus-5x.png" class="thumbnail">
+        <p>Nexus-5x</p>
+        <img src="images/nexus-5x.png" alt="Nexus-5x" class="img-responsive" style="width:150px;height:150px">
+      </a>
+    </div>
+    </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <a href="images/lenova.png" class="thumbnail">
+        <p>Lenova</p>
+        <img src="images\lenova.png" alt="Lenova" class="img-responsive" style="width:150px;height:150px">
+      </a>
+    </div>
+    <div class="col-md-4">
+      <a href="images/motox.png" class="thumbnail">
+        <p>Moto X</p>
+        <img src="images/motox.png" alt="bharath" class="img-responsive" style="width:150px;height:150px">
+      </a>
+    </div>
+    <div class="col-md-4">
+      <a href="images/mi5.png" class="thumbnail">
+        <p>Mi5</p>
+        <img src="images/mi5.png" alt="Mi5" class="img-responsive" style="width:150px;height:150px">
+      </a>
+    </div>
+     </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <a href="images/oneplus.png" class="thumbnail">
+        <p>Oneplus X</p>
+        <img src="images/oneplus.png" alt="bharath" class="img-responsive" style="width:150px;height:150px">
+      </a>
+    </div>
+    <div class="col-md-4">
+      <a href="images/apple.png" class="thumbnail">
+        <p>Iphone 6s</p>
+        <img src="images/apple.png" alt="bharath" class="img-responsive" style="width:150px;height:150px">
+      </a>
+    </div>
+    <div class="col-md-4">
+      <a href="images/moto615.png" class="thumbnail">
+        <p>Moto 615</p>
+        <img src="images\moto615.png" alt="bharath" class="img-responsive" style="width:150px;height:150px">
+      </a>
+    </div>
+    </div>
+</div><!--end of thumnails-->
+
+<!-- tabs starting -->
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Mobiles</a></li>
+    <li><a data-toggle="tab" href="#menu3">Exclusive Showrooms</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      
+  <h2>Mobiles</h2>
+  <p>click on the logo to get the latest list of mobiles</p>
+<div class="row" style="margin:40px 40px">
+    <div class="col-md-1">
+        <img src="images/logos/logo (1).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (2).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (3).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (4).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (5).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (6).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (7).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (8).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (9).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (10).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (11).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (12).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    </div><!--Logos first row ending-->
+    <!-- logos second row starting -->
+    <div class="row" style="margin:40px 40px">
+    <div class="col-md-1">
+      </div>
+    
+    <div class="col-md-1">
+        <img src="images/logos/logo (13).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (14).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (15).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (16).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (17).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (18).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (19).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (20).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (21).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (22).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    </div><!--Logos second row ending-->
+  <!-- logos third row ending -->
+      <div class="row" style="margin:40px 40px">
+    <div class="col-md-1">
+        <img src="images/logos/logo (23).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (24).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (25).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (26).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (27).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (28).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (29).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (30).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (31).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (32).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (33).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (34).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    </div><!--Logos third row ending-->
+
+    <!-- logos forth row starting -->
+          <div class="row" style="margin:40px 40px">
+    <div class="col-md-1">
+        
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (36).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (37).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (38).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (39).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (40).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (41).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (42).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (43).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (44).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (45).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    </div><!--Logos forth row ending-->
+
+    <!-- logos fifth row starting -->
+          <div class="row" style="margin:40px 40px">
+    <div class="col-md-1">
+        <img src="images/logos/logo (47).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (48).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (49).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (50).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (51).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (52).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (53).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (54).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (55).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (56).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (57).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (58).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    </div><!--Logos fifth row ending-->
+
+    <!-- logos sixth row starting -->
+          <div class="row" style="margin:40px 40px">
+    <div class="col-md-1">
+        
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (60).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (61).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (62).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (63).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (64).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (65).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (66).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (67).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (68).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (69).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    </div><!--Logos sixth row ending-->
+
+        <!-- logos seventh row starting -->
+    <div class="row" style="margin:40px 40px">
+    <div class="col-md-1">
+        
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (70).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (71).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (72).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (73).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (74).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (75).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (76).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (77).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (78).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (79).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (90).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (91).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    </div><!--Logos sixth row ending-->
+        <!-- logos sixth row starting -->
+          <div class="row" style="margin:40px 40px">
+    <div class="col-md-1">
+        
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (80).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (81).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (82).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (83).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (84).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (85).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (86).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (87).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (88).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    <div class="col-md-1">
+        <img src="images/logos/logo (89).gif" alt="bharath" class="img-responsive">
+      </a>
+    </div>
+    </div><!--Logos sixth row ending-->
+    </div>
+    
+    
+   		<div id="menu3" class="tab-pane fade">
+      <h3>Exclusive Showrooms</h3>
+      <p>Find the nearest showrooms around you</p>
+      <div id="googleMap" style="width:500px;height:380px;"></div>
+    </div>
+  </div>
+</div><!--tabs endging-->
+
+<footer>
+				<div class="row">
+				<div class="cols-md-6 pull-left" style="margin-left:10%">
+						Enter your email to be the first to know when a new gadget hits the site<br><br>
+						<input type="text" placeholder="Enter your email address"><button class="btn btn-primary">Subscribe</button>
+					</div>
+					<div class="cols-md-6 pull-right" style="margin-right:10%">
+						<button class="btn btn-primary"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i>&nbsp;Become a Fan in FB</button>
+						<br><br>
+						<button class="btn btn-danger"><i class="fa fa-twitter fa-lg" aria-hidden="true">&nbsp;Follow @GadgetWorld</i></button>
+					</div>
+					</div>
+			
+			</footer>	
+	
+	<!-- Your Code Goes Here. Remember to remove this comment once you've started, you don't need it :) -->
+	
+
+	<!-- All Javascript at the bottom of the page for faster page loading -->
+		
+	<!-- First try for the online version of jQuery-->
+	<script src="http://code.jquery.com/jquery.js"></script>
+	
+	<!-- If no online access, fallback to our hardcoded version of jQuery -->
+	<script>window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\/script>')</script>
+	
+	<!-- Bootstrap JS -->
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	
+	<!-- Custom JS -->
+	<script src="includes/js/script.js"></script>
+	
+	</body>
+</html>
+

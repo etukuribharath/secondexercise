@@ -1,0 +1,231 @@
+/*
+
+My Custom CSS
+=============
+
+*/
+/*logo images in mobile tab */
+footer{
+  background-color: #6E7475;
+}
+/*logo image in navbar*/
+.im{
+   margin-top: -15px;
+   height: 50px;
+   width: 50px;
+}
+
+/*nav bar scroll effect*/
+body {
+  padding-top: 50px;
+  margin-top: 100px;
+}
+
+nav a{
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+  font-size: 18px;
+}
+.test a{
+   padding-top:10px !important;
+   padding-bottom: 10px !important;
+   font-size: 18px;
+}
+
+nav .navbar-toggle {
+  margin: 13px 15px 13px 0;
+}
+
+.navbar-brand {
+  font-size: 30px;
+}
+nav.navbar.shrink {
+  min-height: 35px;
+}
+
+nav.shrink a {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  font-size: 15px;
+}
+
+nav.shrink .navbar-brand {
+  font-size: 25px;
+}
+
+nav.shrink .navbar-toggle {
+  padding: 4px 5px;
+  margin: 8px 15px 8px 0;
+}/*navbar scroll effect end*/
+
+/*navbar collapse size setting*/
+@media (max-width: 991px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+}
+/* --------------------------------------
+   Layout
+   -------------------------------------- */
+
+
+
+/* --------------------------------------
+   Typography
+   -------------------------------------- */
+
+
+
+/* --------------------------------------
+   Navbar
+   -------------------------------------- */
+   
+   
+   
+/* --------------------------------------
+   Carousel
+   -------------------------------------- */
+#myCarousel {
+   margin-top: 40px;
+}
+
+.carousel-caption {
+   font-size: 24px;
+}
+
+.carousel-caption h4 {
+   font-size: 32px;
+}
+#myCarousel{
+   padding:0px;
+}
+
+#myCarousel .item { height: 500px;}
+
+#slide1 {
+   background: url('../../images/cover.jpg') top center no-repeat;
+}
+
+#slide2 {
+   background: url('../../images/ipad.png') top center no-repeat;
+}
+
+#slide3 {
+   background: url('../../images/iphone7.png') top center no-repeat;
+}
+#slide4 {
+   background: url('../../images/ipad1.jpg') top center no-repeat;
+}
+#slide5 {
+   background: url('../../images/dell1.jpg') top center no-repeat;
+}
+
+
+/* --------------------------------------
+   Global Styles
+   -------------------------------------- */
+
+
+
+/* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+
+/* Portrait & landscape phone */
+@media (max-width: 480px) {
+#slide1 {
+   background: url('../../images/cover.jpg') top center no-repeat;
+}
+
+#slide2 {
+   background: url('../../images/ipad.png') top center no-repeat;
+}
+
+#slide3 {
+   background: url('../../images/iphone7.png') top center no-repeat;
+}
+#slide4 {
+   background: url('../../images/ipad1.jpg') top center no-repeat;
+}
+#slide5 {
+   background: url('../../images/dell1.jpg') top center no-repeat;
+}
+	
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+#slide1 {
+   background: url('../../images/cover.jpg') top center no-repeat;
+}
+
+#slide2 {
+   background: url('../../images/ipad.png') top center no-repeat;
+}
+
+#slide3 {
+   background: url('../../images/iphone7.png') top center no-repeat;
+}
+#slide4 {
+   background: url('../../images/ipad1.jpg') top center no-repeat;
+}
+#slide5 {
+   background: url('../../images/dell1.jpg') top center no-repeat;
+}
+	
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+#slide1 {
+   background: url('../../images/cover.jpg') top center no-repeat;
+}
+
+#slide2 {
+   background: url('../../images/ipad.png') top center no-repeat;
+}
+
+#slide3 {
+   background: url('../../images/iphone7.png') top center no-repeat;
+}
+#slide4 {
+   background: url('../../images/ipad1.jpg') top center no-repeat;
+}
+#slide5 {
+   background: url('../../images/dell1.jpg') top center no-repeat;
+}
+	
+}
